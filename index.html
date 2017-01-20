@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -79,23 +79,23 @@
 2. Y轴表示在垂直方向，正值表示垂直向下。
 3. Z轴表示垂直于屏幕方向，正值朝向屏幕外。
 </code></pre><h2 id="css3的旋转效果实现。"><a href="#css3的旋转效果实现。" class="headerlink" title="css3的旋转效果实现。"></a>css3的旋转效果实现。</h2><p>   左手原则：大拇指指向轴的朝向，四指就是旋转的方向。<br>   例如： rotateX(45deg),rotateY(45deg)或者rotateZ(45deg);<br>   浏览器对transform 的解析是从左向右的。</p>
-<h2 id="近大远小效果的实现。"><a href="#近大远小效果的实现。" class="headerlink" title="近大远小效果的实现。"></a>近大远小效果的实现。</h2><p>   一般给父元素或着祖先元素设置perspective属性来实现。<br><img src="images/1.png" alt=""><br>   实质上是表示元素距离显示屏幕的大小。<br><img src="images/2.png" alt=""><br><img src="images/3.png" alt=""><br><img src="images/4.png" alt=""><br><img src="images/5.png" alt=""></p>
+<h2 id="近大远小效果的实现。"><a href="#近大远小效果的实现。" class="headerlink" title="近大远小效果的实现。"></a>近大远小效果的实现。</h2><p>   一般给父元素或着祖先元素设置perspective属性来实现。<br><img src="../images/1.png" alt=""><br>   实质上是表示元素距离显示屏幕的大小。<br><img src="../images/2.png" alt=""><br><img src="../images/3.png" alt=""><br><img src="../images/4.png" alt=""><br><img src="../images/5.png" alt=""></p>
 <h2 id="开启浏览器的3D变换效果。"><a href="#开启浏览器的3D变换效果。" class="headerlink" title="开启浏览器的3D变换效果。"></a>开启浏览器的3D变换效果。</h2><pre><code>1.为3变换的父元素设置此属性 transform-style: preserve-3d
 2.父元素如果设置了opacity 属性，那么渲染效果不会起作用。
 </code></pre><h2 id="动画效果的设置"><a href="#动画效果的设置" class="headerlink" title="动画效果的设置"></a>动画效果的设置</h2><ul>
-<li>1.首先定义动画<br><img src="images/6.png" alt=""></li>
+<li>1.首先定义动画<br><img src="../images/6.png" alt=""></li>
 <li>2.然后在设置动画的属性<ul>
 <li>animation-name: 动画的名称。</li>
 <li>animation-duration: 动画的持续时间。</li>
 <li>animation-timing-function:动画的线性 linear.</li>
 <li>animation-iteration-count:动画的播放次数 infinate</li>
-<li>animation-play-state: 动画的播放次数 running/paused.<br><img src="images/7.png" alt=""><h2 id="定义动画的播放阶段。"><a href="#定义动画的播放阶段。" class="headerlink" title="定义动画的播放阶段。"></a>定义动画的播放阶段。</h2><img src="images/8.png" alt=""><br><strong>如果在上一个阶段中设定了一个动画属性后，下一个阶段不设定次属性的话，会还原成默认值</strong></li>
+<li>animation-play-state: 动画的播放次数 running/paused.<br><img src="images/7.png" alt=""><h2 id="定义动画的播放阶段。"><a href="#定义动画的播放阶段。" class="headerlink" title="定义动画的播放阶段。"></a>定义动画的播放阶段。</h2><img src="../images/8.png" alt=""><br><strong>如果在上一个阶段中设定了一个动画属性后，下一个阶段不设定次属性的话，会还原成默认值</strong></li>
 </ul>
 </li>
 <li>动画结束时保持设置状态的属性设定。<ul>
 <li>animation-fill-mode:forwards;<h2 id="动画属性的合写。"><a href="#动画属性的合写。" class="headerlink" title="动画属性的合写。"></a>动画属性的合写。</h2><ul>
 <li>第一次出现的是持续时间，第二次出现的是延迟时间，其他值没有顺序要求</li>
-<li>有多个动画属性合写时用逗号分割。<br><img src="images/9.png" alt=""><h2 id="动画库的使用。"><a href="#动画库的使用。" class="headerlink" title="动画库的使用。"></a>动画库的使用。</h2></li>
+<li>有多个动画属性合写时用逗号分割。<br><img src="../images/9.png" alt=""><h2 id="动画库的使用。"><a href="#动画库的使用。" class="headerlink" title="动画库的使用。"></a>动画库的使用。</h2></li>
 </ul>
 </li>
 </ul>
@@ -104,7 +104,7 @@
 <li>设置类名。</li>
 </ul>
 </blockquote>
-<p>  <img src="images/10.png" alt=""></p>
+<p>  <img src="../images/10.png" alt=""></p>
 <h2 id="弹性布局的基本使用。"><a href="#弹性布局的基本使用。" class="headerlink" title="弹性布局的基本使用。"></a>弹性布局的基本使用。</h2><ul>
 <li>设置了<strong> display: flex</strong> 属性之后 称 盒子 为弹性盒子，子元素 就应用了 弹性布局</li>
 <li>弹性布局开启后，默认分为两个轴：主轴和副轴。</li>
@@ -133,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/20/ccs3的3d变换/" data-id="ciy5fi6bw0000zsveqew7t1xr" class="article-share-link">Поделиться</a>
+      <a data-url="http://yoursite.com/2017/01/20/ccs3的3d变换/" data-id="ciy5fi6bw0000zsveqew7t1xr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -211,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/17/1.css3第二天笔记/" data-id="ciy4bz8ub0000ygvelkmijwg6" class="article-share-link">Поделиться</a>
+      <a data-url="http://yoursite.com/2017/01/17/1.css3第二天笔记/" data-id="ciy4bz8ub0000ygvelkmijwg6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -256,7 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/17/hello-world/" data-id="ciy4bz8uf0001ygveca7xamrq" class="article-share-link">Поделиться</a>
+      <a data-url="http://yoursite.com/2017/01/17/hello-world/" data-id="ciy4bz8uf0001ygveca7xamrq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +281,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Архив</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
     </div>
@@ -291,7 +291,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Недавние записи</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -320,7 +320,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
