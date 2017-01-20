@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ccs3的3d变换和动画特效。
+坐标分为三个轴：X轴，Y轴和Z轴
+1. X轴表示在水平方向，正值表示水平向右。
+2. Y轴表示在垂直方向，正值表示垂直向下。
+3. Z轴表示垂直于屏幕方向，正值朝向屏幕外。
+css3的旋转效果实现。   左手原则：大拇指指向轴的朝向，四指就是旋转的方向。   例如： rotateX(45deg),rotateY(45deg)或者rotateZ(45deg);   浏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/01/20/ccs3的3d变换/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="ccs3的3d变换和动画特效。
+坐标分为三个轴：X轴，Y轴和Z轴
+1. X轴表示在水平方向，正值表示水平向右。
+2. Y轴表示在垂直方向，正值表示垂直向下。
+3. Z轴表示垂直于屏幕方向，正值朝向屏幕外。
+css3的旋转效果实现。   左手原则：大拇指指向轴的朝向，四指就是旋转的方向。   例如： rotateX(45deg),rotateY(45deg)或者rotateZ(45deg);   浏">
+<meta property="og:image" content="http://yoursite.com/images/1.png">
+<meta property="og:image" content="http://yoursite.com/images/2.png">
+<meta property="og:image" content="http://yoursite.com/images/3.png">
+<meta property="og:image" content="http://yoursite.com/images/4.png">
+<meta property="og:image" content="http://yoursite.com/images/5.png">
+<meta property="og:image" content="http://yoursite.com/images/6.png">
+<meta property="og:image" content="http://yoursite.com/images/7.png">
+<meta property="og:image" content="http://yoursite.com/images/8.png">
+<meta property="og:image" content="http://yoursite.com/images/9.png">
+<meta property="og:image" content="http://yoursite.com/images/10.png">
+<meta property="og:updated_time" content="2017-01-20T06:30:45.574Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="ccs3的3d变换和动画特效。
+坐标分为三个轴：X轴，Y轴和Z轴
+1. X轴表示在水平方向，正值表示水平向右。
+2. Y轴表示在垂直方向，正值表示垂直向下。
+3. Z轴表示垂直于屏幕方向，正值朝向屏幕外。
+css3的旋转效果实现。   左手原则：大拇指指向轴的朝向，四指就是旋转的方向。   例如： rotateX(45deg),rotateY(45deg)或者rotateZ(45deg);   浏">
+<meta name="twitter:image" content="http://yoursite.com/images/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ccs3的3d变换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/20/ccs3的3d变换/" class="article-date">
+  <time datetime="2017-01-20T03:53:16.775Z" itemprop="datePublished">2017-01-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ccs3的3d变换和动画特效。"><a href="#ccs3的3d变换和动画特效。" class="headerlink" title="ccs3的3d变换和动画特效。"></a>ccs3的3d变换和动画特效。</h1><blockquote>
+<p>坐标分为三个轴：X轴，Y轴和Z轴</p>
+<pre><code>1. X轴表示在水平方向，正值表示水平向右。
+2. Y轴表示在垂直方向，正值表示垂直向下。
+3. Z轴表示垂直于屏幕方向，正值朝向屏幕外。
+</code></pre><h2 id="css3的旋转效果实现。"><a href="#css3的旋转效果实现。" class="headerlink" title="css3的旋转效果实现。"></a>css3的旋转效果实现。</h2><p>   左手原则：大拇指指向轴的朝向，四指就是旋转的方向。<br>   例如： rotateX(45deg),rotateY(45deg)或者rotateZ(45deg);<br>   浏览器对transform 的解析是从左向右的。</p>
+<h2 id="近大远小效果的实现。"><a href="#近大远小效果的实现。" class="headerlink" title="近大远小效果的实现。"></a>近大远小效果的实现。</h2><p>   一般给父元素或着祖先元素设置perspective属性来实现。<br><img src="images/1.png" alt=""><br>   实质上是表示元素距离显示屏幕的大小。<br><img src="images/2.png" alt=""><br><img src="images/3.png" alt=""><br><img src="images/4.png" alt=""><br><img src="images/5.png" alt=""></p>
+<h2 id="开启浏览器的3D变换效果。"><a href="#开启浏览器的3D变换效果。" class="headerlink" title="开启浏览器的3D变换效果。"></a>开启浏览器的3D变换效果。</h2><pre><code>1.为3变换的父元素设置此属性 transform-style: preserve-3d
+2.父元素如果设置了opacity 属性，那么渲染效果不会起作用。
+</code></pre><h2 id="动画效果的设置"><a href="#动画效果的设置" class="headerlink" title="动画效果的设置"></a>动画效果的设置</h2><ul>
+<li>1.首先定义动画<br><img src="images/6.png" alt=""></li>
+<li>2.然后在设置动画的属性<ul>
+<li>animation-name: 动画的名称。</li>
+<li>animation-duration: 动画的持续时间。</li>
+<li>animation-timing-function:动画的线性 linear.</li>
+<li>animation-iteration-count:动画的播放次数 infinate</li>
+<li>animation-play-state: 动画的播放次数 running/paused.<br><img src="images/7.png" alt=""><h2 id="定义动画的播放阶段。"><a href="#定义动画的播放阶段。" class="headerlink" title="定义动画的播放阶段。"></a>定义动画的播放阶段。</h2><img src="images/8.png" alt=""><br><strong>如果在上一个阶段中设定了一个动画属性后，下一个阶段不设定次属性的话，会还原成默认值</strong></li>
+</ul>
+</li>
+<li>动画结束时保持设置状态的属性设定。<ul>
+<li>animation-fill-mode:forwards;<h2 id="动画属性的合写。"><a href="#动画属性的合写。" class="headerlink" title="动画属性的合写。"></a>动画属性的合写。</h2><ul>
+<li>第一次出现的是持续时间，第二次出现的是延迟时间，其他值没有顺序要求</li>
+<li>有多个动画属性合写时用逗号分割。<br><img src="images/9.png" alt=""><h2 id="动画库的使用。"><a href="#动画库的使用。" class="headerlink" title="动画库的使用。"></a>动画库的使用。</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>引入动画外链</li>
+<li>设置类名。</li>
+</ul>
+</blockquote>
+<p>  <img src="images/10.png" alt=""></p>
+<h2 id="弹性布局的基本使用。"><a href="#弹性布局的基本使用。" class="headerlink" title="弹性布局的基本使用。"></a>弹性布局的基本使用。</h2><ul>
+<li>设置了<strong> display: flex</strong> 属性之后 称 盒子 为弹性盒子，子元素 就应用了 弹性布局</li>
+<li>弹性布局开启后，默认分为两个轴：主轴和副轴。</li>
+<li>主轴 ：从左往右 x方向<ul>
+<li>设置主轴的对齐方式: justify-content:flex-start;</li>
+</ul>
+<ol>
+<li>lex-end;主轴的末尾</li>
+<li>flex-start:主轴的 开始</li>
+<li>space-around 会预留一些间隙</li>
+<li>space-between 元素之间 会预留间隙 但是 两边顶格。</li>
+</ol>
+</li>
+<li>设置副轴的对其方式: align-items: flex-start;<ol>
+<li>flex-end; 底部<br>2.center 中间<br>3.flex-start 默认值; </li>
+</ol>
+</li>
+<li><strong>设置子项单独在侧轴（纵轴）方向上的对齐方式: align-self</strong><ol>
+<li>align-self: flex-end.</li>
+<li>align-self: flex-start</li>
+<li>align-self:center;     </li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/20/ccs3的3d变换/" data-id="ciy5fi6bw0000zsveqew7t1xr" class="article-share-link">Поделиться</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/17/1.css3第二天笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Предыдущий</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Архив</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Недавние записи</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/01/20/ccs3的3d变换/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/17/1.css3第二天笔记/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/17/hello-world/">你好！！</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
